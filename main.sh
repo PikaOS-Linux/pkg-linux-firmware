@@ -8,7 +8,7 @@ git clone https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmwar
 cp -rvf ./debian-firmware/* ./linux-firmware/
 cd ./linux-firmware
 touch debian/changelog
-echo -e "linux-firmware ("$(date '+%Y%m%d')".git-99pika"$(date '+%M')") kinetic; urgency=medium\n\n* New Upstream Release\n\n-- Ward Nakchbandi <hotrod.master@hotmail.com> Sat, 01 Oct 2022 14:50:00 +0200" > debian/changelog
+echo -e "linux-firmware ("$(date '+%Y%m%d')".git-99pika"$(date '+%M')") kinetic; urgency=medium\n\n\t* New Upstream Release\n\n-- Ward Nakchbandi <hotrod.master@hotmail.com> Sat, 01 Oct 2022 14:50:00 +0200" > debian/changelog
 
 # Get build deps
 apt-get build-dep ./ -y
