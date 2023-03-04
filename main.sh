@@ -15,7 +15,7 @@ echo -e "linux-firmware ("$(date '+%Y%m%d')".git-99pika"$(date '+%M')") kinetic;
 apt-get build-dep ./ -y
 
 # Build package
-LOGNAME=root dh_make --createorig -y -l -p linux-firmware_"$(date '+%Y%m%d')" || echo "dh-make didn't go clean"
+LOGNAME=root dh_make --createorig -y -l -p linux-firmware_"$(date '+%Y%m%d')".git || echo "dh-make didn't go clean"
 dpkg-buildpackage
 
 # Move the debs to output
