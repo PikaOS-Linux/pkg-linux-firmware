@@ -6,7 +6,7 @@ add-apt-repository ppa:pikaos/pika
 add-apt-repository ppa:kubuntu-ppa/backports
 # Clone Upstream
 git clone https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/
-cp -rvf ./debian-firmware/* ./linux-firmware/
+cp -rvn ./debian-firmware/* ./linux-firmware/
 cd ./linux-firmware
 touch debian/changelog
 echo -e "linux-firmware ("$(date '+%Y%m%d')".git-99pika"$(date '+%M')") kinetic; urgency=medium\n\n  * New Upstream Release\n\n -- Ward Nakchbandi <hotrod.master@hotmail.com> Sat, 01 Oct 2022 14:50:00 +0200" > debian/changelog
