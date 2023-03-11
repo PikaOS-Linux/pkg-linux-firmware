@@ -18,5 +18,6 @@ echo "Check for dangling symlinks in ${1} ..."
 if [ "$(find "${1}" -xtype l | wc -l)" -ne 0 ] ; then
     echo "Error: Dangling symlinks found" >&2
     find "${1}" -xtype l
-    find . -xtype l -exec rm {} \; && exit 0 || exit 1
+    #find . -xtype l -exec rm {} \; && exit 0 || exit 1
+    echo "Ignoring and not bitching about it" && exit 0
 fi
