@@ -4,6 +4,9 @@ dpkg-sig --sign builder ./output/*.deb
 # Pull down existing ppa repo db files etc
 rsync -azP --exclude '*.deb' ferreo@direct.pika-os.com:/srv/www/pikappa/ ./output/repo
 
+# Remove our existing package from the repo
+reprepro -V --basedir ./output/repo/ removefilter lunar 'Package (% linux-firmware*)'
+
 # Add the new package to the repo
 reprepro -V --basedir ./output/repo/ includedeb lunar ./output/*.deb
 
