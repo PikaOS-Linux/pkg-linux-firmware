@@ -1,9 +1,5 @@
 #! /bin/bash
-# Add dependent repositories
-wget -q -O - https://ppa.pika-os.com/key.gpg | sudo apt-key add -
-add-apt-repository https://ppa.pika-os.com
-add-apt-repository ppa:pikaos/pika
-add-apt-repository ppa:kubuntu-ppa/backports
+
 # Clone Upstream
 #git clone https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/
 git clone https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/ -b 20230515
