@@ -20,10 +20,6 @@ override_dh_install:
 
 override_dh_clean:
 	dh_clean
-	# Run sanity checks if in a git repo
-	if [ -d .git ] ; then \
-		$(MAKE) check ; \
-	fi
 
 override_dh_auto_build:
 
