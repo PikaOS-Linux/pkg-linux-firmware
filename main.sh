@@ -1,5 +1,9 @@
 #! /bin/bash
 
+LC_ALL=C apt list --installed | grep -F '[installed,local]'
+
+exit 0
+
 # Clone Upstream
 #git clone https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/
 git clone https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/ -b main

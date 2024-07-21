@@ -1,4 +1,4 @@
-name: PikaOS Package Release
+name: PikaOS Package Build Only (Canary)
 
 on:
   workflow_dispatch
@@ -32,9 +32,6 @@ jobs:
     
     - name: Build Package
       run: ./main.sh
-
-    - name: Release Package
-      run: ./release.sh
 
     - name: Purge cache
       uses: strrife/cloudflare-chunked-purge-action@master
