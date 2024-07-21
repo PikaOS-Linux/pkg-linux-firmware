@@ -1,15 +1,12 @@
 #! /bin/bash
 
-LC_ALL=C apt list --installed | grep -F '[installed,local]'
-
-exit 1
-
 VERSION=$(date '+%Y%m%d')
 
 # Clone Upstream
 #git clone https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/
 git clone https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/ -b main
-cp -rvn ./debian-firmware/* ./linux-firmware/
+cp -rvf ./debian ./linux-firmware/
+cp -rvf ./ath12k ./linux-firmware/
 cd ./linux-firmware
 touch debian/changelog
 echo -e "linux-firmware ("$VERSION".git-101pika1) canary; urgency=medium\n\n  * New Upstream Release\n\n -- Ward Nakchbandi <hotrod.master@hotmail.com> Sat, 01 Oct 2022 14:50:00 +0200" > debian/changelog

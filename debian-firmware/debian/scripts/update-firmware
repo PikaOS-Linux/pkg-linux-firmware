@@ -1,6 +1,0 @@
-#!/bin/bash -eu
-#
-# Update firmware from sources
-#
-
-make -C fw_source update
