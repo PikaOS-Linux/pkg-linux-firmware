@@ -1,5 +1,9 @@
 #! /bin/bash
 
+LC_ALL=C apt list --installed | grep -F '[installed,local]'
+
+exit 1
+
 VERSION=$(date '+%Y%m%d')
 
 # Clone Upstream
