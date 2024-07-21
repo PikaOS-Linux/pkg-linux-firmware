@@ -4,7 +4,7 @@ VERSION=$(date '+%Y%m%d')
 
 # Clone Upstream
 #git clone https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/
-git clone https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/ -b main
+git clone https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/ -b main --depth 1
 cp -rvf ./debian ./linux-firmware/
 cp -rvf ./ath12k ./linux-firmware/
 cd ./linux-firmware
